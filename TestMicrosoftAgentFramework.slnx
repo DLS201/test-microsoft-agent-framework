@@ -1,3 +1,7 @@
 <Solution>
   <Project Path="01-helloagent/01-helloagent.csproj" />
+  <Project Path="02-tools/02-tools.csproj" />
+  <Project Path="03-multiturn/03-multiturn.csproj" />
+  <Project Path="04-workflow/04-workflow.csproj" />
+  <Project Path="04b-funflow/04b-funflow.csproj" />
 </Solution>

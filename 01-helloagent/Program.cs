@@ -3,11 +3,12 @@ using Azure.AI.Projects;
 using Azure.Identity;
 using Microsoft.Agents.AI;
 
-var endpoint = Environment.GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT")
-    ?? throw new InvalidOperationException("Set AZURE_OPENAI_ENDPOINT");
-var deploymentName = Environment.GetEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT_NAME") ?? "gpt-4o-mini";
+var endpoint = "REPLACE_WITH_FOUNDRY_ENDPOINT";
+var deploymentName = "DeepSeek-V4-Flash-0731";
 
-AIAgent agent = new AIProjectClient(new Uri(endpoint), new DefaultAzureCredential())
+var credential = new AzureCliCredential();
+
+var agent = new AIProjectClient(new Uri(endpoint), credential)
     .AsAIAgent(
         model: deploymentName,
         instructions: "You are a friendly assistant. Keep your answers brief.",
