@@ -15,3 +15,8 @@ var agent = new AIProjectClient(new Uri(endpoint), credential)
         name: "HelloAgent");
 
 Console.WriteLine(await agent.RunAsync("What is the largest city in France?"));
+
+/*
+Réponse:
+The largest city in France is **Paris**. It's also the capital and one of the most populous urban areas in Europe.
+*/
